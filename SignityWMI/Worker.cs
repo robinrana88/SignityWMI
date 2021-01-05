@@ -37,8 +37,9 @@ namespace SignityWMI
             {
                 _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);//basically gives timestamp
                 
-                Console.WriteLine(account.GetAccountsTest());
+                //Console.WriteLine(account.GetAccountsTest());
                 Console.WriteLine(account.GetAccounts());
+                Console.WriteLine(account.NameOfPersonLoggedIn());
                 Console.WriteLine(datetime.NameOfTimeZone());
                 Console.WriteLine(hardware.DetermineTheMemory());
                 Console.WriteLine(hardware.TotalPhysicalMemory());
@@ -54,15 +55,14 @@ namespace SignityWMI
                 os.SerialNoOfsystem();
                 os.DetermineOSInstallDate();
                 os.OSVersion();
-                os.WindowDIrectoryPath();
-                os.DetermineWindowsActivation();
-                processor.DetermineWindowsActivation();
+                os.WindowDIrectoryPath();                
+                processor.DetermineProcessThread();
                 Console.WriteLine(software.GetBIOScaption());
                 Console.WriteLine(software.GetBIOSmaker());
                 Console.WriteLine(software.GetBiosSerialNo());
                 windowservice.ServiceStatus();
 
-                await Task.Delay(1000, stoppingToken);
+                await Task.Delay(60*1000, stoppingToken);//run every 1 min
             }
         }
 

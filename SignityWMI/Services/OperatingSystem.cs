@@ -17,7 +17,7 @@ namespace SignityWMI.Services
             IEnumerable queryInstance = session.QueryInstances(@"root\cimv2", "WQL", "SELECT * FROM Win32_OperatingSystem");
             foreach (CimInstance cimObj in queryInstance)
             {
-                Console.WriteLine("Service Pack major version " + cimObj.CimInstanceProperties["ServicePackMajorVersion "].ToString());
+                Console.WriteLine("Service Pack major version " + cimObj.CimInstanceProperties["ServicePackMajorVersion"].ToString());
                 Console.WriteLine("Service Pack Minor Version " + cimObj.CimInstanceProperties["ServicePackMinorVersion"].ToString());
             }
             return "";
@@ -63,9 +63,9 @@ namespace SignityWMI.Services
             IEnumerable queryInstance = session.QueryInstances(@"root\cimv2", "WQL", "SELECT * FROM Win32_OperatingSystem");
             foreach (CimInstance cimObj in queryInstance)
             {
-                Console.WriteLine("Activaion required :" + cimObj.CimInstanceProperties["ActivationRequired"].ToString());
-                Console.WriteLine("Remaining Evaluation Period :" + cimObj.CimInstanceProperties["RemainingEvaluationPeriod"].ToString());
-                Console.WriteLine("Remaining Grace Period :" + cimObj.CimInstanceProperties["RemainingGracePeriod"].ToString());
+                //Console.WriteLine("Activation required :" + cimObj.CimInstanceProperties["ActivationRequired"].ToString());
+                //Console.WriteLine("Remaining Evaluation Period :" + cimObj.CimInstanceProperties["RemainingEvaluationPeriod"].ToString());
+                //Console.WriteLine("Remaining Grace Period :" + cimObj.CimInstanceProperties["RemainingGracePeriod"].ToString());
             }
             return "";
         }

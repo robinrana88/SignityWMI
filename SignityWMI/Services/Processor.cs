@@ -10,7 +10,7 @@ namespace SignityWMI.Services
 {
     public class Processor
     {
-        public string DetermineWindowsActivation()
+        public string DetermineProcessThread()
         {
             CimSession session = CimSession.Create("localHost");
             IEnumerable queryInstance = session.QueryInstances(@"root\cimv2", "WQL", "SELECT * FROM Win32_Process");

@@ -25,7 +25,7 @@ namespace SignityWMI.Services
         {
             StringBuilder sb = new StringBuilder();
             CimSession session = CimSession.Create("localHost");
-            IEnumerable queryInstance = session.QueryInstances(@"root\cimv2", "WQL", "Select * From Win32_NetworkAdapterConfiguration" + "Where IPEnabled = True");
+            IEnumerable queryInstance = session.QueryInstances(@"root\cimv2", "WQL", "Select * From Win32_NetworkAdapterConfiguration" + " Where IPEnabled = True");
             foreach (CimInstance cimObj in queryInstance)
             {
                 // cimObj.ReleaseDHCPLease();
@@ -39,7 +39,7 @@ namespace SignityWMI.Services
         {
             StringBuilder sb = new StringBuilder();
             CimSession session = CimSession.Create("localHost");
-            IEnumerable queryInstance = session.QueryInstances(@"root\cimv2", "WQL", "Select * From Win32_NetworkAdapterConfiguration" + "Where IPEnabled = True");
+            IEnumerable queryInstance = session.QueryInstances(@"root\cimv2", "WQL", "Select * From Win32_NetworkAdapterConfiguration" + " Where IPEnabled = True");
             foreach (CimInstance cimObj in queryInstance)
             {
                 // cimObj.ReleaseDHCPLease();

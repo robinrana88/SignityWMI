@@ -72,7 +72,7 @@ namespace SignityWMI
             try
             {
                 MimeMessage message = new MimeMessage();
-                MailboxAddress from = new MailboxAddress("Admin", "admin@RedBlink.com");
+                MailboxAddress from = new MailboxAddress("Admin", "admin@Signity.com");
                 MailboxAddress to = new MailboxAddress("toname", "to_email");
                 message.From.Add(from);
                 message.To.Add(to);
